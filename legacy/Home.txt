@@ -1,0 +1,94 @@
+//Supprimé le 30/06/22
+//Cela fait trop version responsive d'un site, 
+//et pas assez application.
+
+{/* Textes de la page d'accueil */}
+{/* <CustomText style={[GlobalStyles.h1, HomeStyles.title]}>Partagez vos envies avec Regalo !</CustomText>
+<CustomText style={[GlobalStyles.p, HomeStyles.text]}>
+    Un anniversaire, une fête, Noël, un mariage… toutes les occasions sont bonnes pour offrir des cadeaux à sa famille ou ses amis.
+    {"\n"}
+    En revanche, il n’est pas toujours facile de trouver les idées…
+    {"\n"}
+    {"\n"}
+    Regalo permet de mieux connaitre les envies de ses proches et de pouvoir leur offrir un cadeau qui leur fera plaisir à coup sûr !
+</CustomText> */}
+
+{/* Section "Faites plaisir à vos proches" */}
+<View style={[GlobalStyles.container, GlobalStyles.bgPrimary]}>
+    {/* Arrondi supérieur blanc */}
+    <View style={HomeStyles.whiteTopRadius}></View>
+
+    <CustomText style={[GlobalStyles.h1, HomeStyles.title, {color: 'black'}]}>Faites plaisir à vos reproches</CustomText>
+    
+    {/* Blocs Photo + titre + texte */}
+    <View style={HomeStyles.stockContainer}>
+        <Image
+            style={HomeStyles.stockImages} 
+            source={require('../assets/homePage/faire-sa-liste-de-cadeaux-en-quelques-clics.jpg')}
+        />
+        <CustomText style={[GlobalStyles.h3, HomeStyles.stockOrangeTitle]}>Créez votre liste de cadeaux</CustomText>
+        <CustomText style={[GlobalStyles.p]}>
+            Avec Regalo, il n’a jamais été aussi facile d’écrire ses envies, ses souhaits, ses préférences, ses styles… 
+            Créez votre <Strong>liste sur mesure</Strong> pour un anniversaire, un mariage, une naissance, une soirée...          
+        </CustomText>
+    </View>
+    <View style={HomeStyles.stockContainer}>
+        <Image
+            style={HomeStyles.stockImages} 
+            source={require('../assets/homePage/Partagez-vos-envies.jpg')}
+        />
+        <CustomText style={[GlobalStyles.h3, HomeStyles.stockOrangeTitle]}>Partagez vos envies</CustomText>
+        <CustomText style={[GlobalStyles.p]}>
+            Vos amis retrouvent tous vos <Strong>goûts</Strong> sur Regalo, avec vos <Strong>préférences </Strong>
+            et vos <Strong>caractéristiques</Strong>. Inscrivez vos préférences et choisissez la confidentialité de vos idées cadeaux.
+        </CustomText>
+    </View>
+    <View style={HomeStyles.stockContainer}>
+        <Image
+            style={HomeStyles.stockImages} 
+            source={require('../assets/homePage/Decouvrez-ce-quaiment-vos-proches.jpg')}
+        />
+        <CustomText style={[GlobalStyles.h3, HomeStyles.stockOrangeTitle]}>Découvrez ce qu'aiment vos proches</CustomText>
+        <CustomText style={[GlobalStyles.p]}>
+        Ajouter les membres de votre famille et vos amis sur Regalo et consultez leurs <Strong>goûts et préférences </Strong> 
+            d’un simple coup d’œil sur leur profil ! Il n’a jamais été aussi d’offrir un cadeau !
+        </CustomText>
+    </View>
+</View>
+
+{/* Deuxième section orange */}
+<LinearGradient colors={['#ca4e21', '#dc762d']} style={[GlobalStyles.container, {paddingTop: 50, paddingBottom: 50}]}>
+    <View style={HomeStyles.whiteBottomRadius}></View>
+    <Image 
+        style={HomeStyles.stockImages}
+        source={require('../assets/homePage/partage-liste-de-cadeaux-amis-famille.jpg')}
+    />
+    <CustomText style={[GlobalStyles.h1, GlobalStyles.textCenter, GlobalStyles.whiteText, {marginBottom: 10, marginTop: 10}]}>La confidentialité est notre priorité</CustomText>
+    <CustomText style={[GlobalStyles.p, GlobalStyles.textCenter, GlobalStyles.whiteText]}>
+    Vos amis sont classés selon leur <Strong>proximité</Strong> avec vous. Grâce aux <Strong>cercles de confidentialité</Strong>, vous leur donnerez ou non accès à vos idées de cadeaux, qu’elles soient originales, confidentielles, ou visibles par tous vos contacts. Trois niveaux existent : le cercle large, le cercle proche et le cercle intime !
+    {"\n\n"}
+    De plus, toutes les informations sur vos envies sont entièrement sécurisées, les données étant stockées sur un serveur français.
+    </CustomText>
+    <Image 
+        style={[HomeStyles.stockImages, {marginTop: 40}]}
+        source={require('../assets/homePage/inspirer-ses-proches-cadeaux-à-offrir.jpg')}
+    />
+    <CustomText style={[GlobalStyles.h1, GlobalStyles.textCenter, GlobalStyles.whiteText, {marginBottom: 10, marginTop: 10}]}>Trouvez vos amis facilement</CustomText>
+    <CustomText style={[GlobalStyles.p, GlobalStyles.textCenter, GlobalStyles.whiteText]}>
+    Regalo est avant tout un réseau social qui permet de connaître les envies de ses proches ! <Strong>Trouvez rapidement vos amis</Strong> via notre outil de recherche et découvrez leurs profils, avec leurs envies, leurs tailles, leurs préférences et leurs goûts.
+    {"\n\n"}
+    Envoyez un <Strong>lien via Messenger</Strong> pour inviter vos amis ou <Strong>par mail</Strong> pour qu’ils rejoignent vos cercles !
+    </CustomText>
+</LinearGradient>
+<View style={[GlobalStyles.container, GlobalStyles.bgPrimary]}>
+    <View style={HomeStyles.whiteTopRadius}></View>
+    <CustomText style={[GlobalStyles.h1, GlobalStyles.textCenter]}>Vous vous posez sûrement des questions ?</CustomText>
+    <CustomText style={[GlobalStyles.h1, GlobalStyles.textCenter, {fontSize: 26, color: _default.orange, fontFamily: _default.regular}]}>Nous pouvons y répondre !</CustomText>
+    <CollapsingItemsList style={[{marginTop: 10}]} items={questions} />
+    <CustomText style={[GlobalStyles.h1, GlobalStyles.textCenter, {marginTop: 30}]}>Ils parlent de nous</CustomText>
+    <CustomText style={[GlobalStyles.h1, GlobalStyles.textCenter, {fontSize: 26, color: _default.orange, fontFamily: _default.regular}]}>parce que c'est génial !</CustomText>
+</View>
+<View style={[GlobalStyles.bgPrimary, {paddingBottom: 20}]}>
+    <ReviewsCarousel />
+</View>
+<LinearGradient start={{x: 0, y: 0.5}} end={{x: 1, y: 0.5}} colors={[_default.orangeDark, _default.orangeLightHome]} style={[GlobalStyles.container]}></LinearGradient>
